@@ -1,0 +1,13 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartTable="sap.ui.comp.smarttable"
+	controllerName="fiori.create.pruchase.documents.PurchaseDocumentsFreestyle.controller.DisplayPurchaseDocuments">
+	<Page title="Display Purchase Documents" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<smartFilterBar:SmartFilterBar id="purchaseDocumentsSmartFilterBar" entitySet="PurchaseDocument"
+				persistencyKey="purchaseDocumentsFilterBarKey" enableBasicSearch="true"/>
+			<smartTable:SmartTable entitySet="PurchaseDocument" header="Purchase Documents" smartFilterId="purchaseDocumentsSmartFilterBar"
+				enableAutoBinding="true" tableType="ResponsiveTable" persistencyKey="purchaseDocumentsFilterBarKey" demandPopin="true"
+				id="purchaseDocumentsSmartTable"/>
+		</content>
+	</Page>
+</mvc:View>

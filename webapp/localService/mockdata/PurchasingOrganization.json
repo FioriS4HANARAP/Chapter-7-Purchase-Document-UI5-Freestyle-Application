@@ -1,0 +1,14 @@
+[{
+	"PurchasingOrganization": "ORG1",
+	"Description": "Purchasing Organization 1",
+	"Email": "purchorg1@purchasing.com",
+	"Phone": "14363146",
+	"Fax": "13546715754"
+},
+{
+	"PurchasingOrganization": "ORG2",
+	"Description": "Purchasing Organization 2",
+	"Email": "purchorg2@purchasing.com",
+	"Phone": "13472457",
+	"Fax": "24583759647"
+}]

@@ -1,0 +1,6 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/Z_UI_PURCHASEDOCUMENT_V2/$metadata"/>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+	</edmx:DataServices>
+</edmx:Edmx>

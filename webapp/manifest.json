@@ -1,0 +1,151 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "fiori.create.pruchase.documents.PurchaseDocumentsFreestyle",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"Z_UI_PURCHASEDOCUMENT_V2": {
+				"uri": "/sap/opu/odata/sap/Z_UI_PURCHASEDOCUMENT_V2/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/Z_UI_PURCHASEDOCUMENT_V2/metadata.xml",
+					"annotations": [
+						"Z_UI_PURCHASEDOCUMENT_V2_VAN",
+						"annotations"
+					]
+				}
+			},
+			"Z_UI_PURCHASEDOCUMENT_V2_VAN": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='Z_UI_PURCHASEDOCUMENT_V2_VAN',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": ""
+				}
+			},
+			"annotations": {
+				"type": "ODataAnnotation",
+				"uri": "annotations.xml",
+				"settings": {
+					"localUri": "annotations.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "fiori.create.pruchase.documents.PurchaseDocumentsFreestyle.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "fiori.create.pruchase.documents.PurchaseDocumentsFreestyle.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "Z_UI_PURCHASEDOCUMENT_V2",
+				"preload": true
+			},
+			"@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "fiori.create.pruchase.documents.PurchaseDocumentsFreestyle.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "show",
+				"async": true
+			},
+			"routes": [
+				{
+					"name": "CreatePurchaseDocument",
+					"pattern": "",
+					"target": "CreatePurchaseDocument"
+				},
+				{
+					"name": "DisplayPurchaseDocuments",
+					"pattern": "DisplayPurchaseDocuments",
+					"target": "DisplayPurchaseDocuments"
+				}
+			],
+			"targets": {
+				"CreatePurchaseDocument": {
+					"viewName": "CreatePurchaseDocument"
+				},
+				"DisplayPurchaseDocuments": {
+					"viewName": "DisplayPurchaseDocuments"
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zpurch_doc_fsl/webapp",
+		"_version": "1.1.0"
+	}
+}

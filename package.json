@@ -1,0 +1,22 @@
+{
+	"name": "PurchaseDocumentsFreestyle",
+	"version": "0.0.1",
+	"description": "Purchase Document Freestyle App",
+	"private": true,
+	"devDependencies": {
+		"@sap/grunt-sapui5-bestpractice-build": "1.3.62",
+		"karma": "2.0.4",
+		"grunt-karma": "2.0.0",
+		"karma-openui5": "0.2.3",
+		"karma-chrome-launcher": "2.2.0",
+		"karma-qunit": "2.1.0",
+		"qunit": "2.6.1",
+		"karma-junit-reporter": "1.2.0",
+		"karma-coverage": "1.1.2"
+	},
+	"scripts": {
+		"build": "grunt buildProject --verbose",
+		"test": "grunt testProject  --verbose",
+		"deploy": "grunt deployProject --verbose"
+	}
+}

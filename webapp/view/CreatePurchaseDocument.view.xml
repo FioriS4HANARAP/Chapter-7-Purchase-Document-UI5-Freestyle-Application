@@ -1,0 +1,34 @@
+<mvc:View controllerName="fiori.create.pruchase.documents.PurchaseDocumentsFreestyle.controller.CreatePurchaseDocument"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:smartForm="sap.ui.comp.smartform" xmlns:smartField="sap.ui.comp.smartfield">
+			<Page title="Create Purchase Document">
+				<content>
+					<smartForm:SmartForm editable="true" checkButton="true" id="createPurchaseDocumentSmartForm" title="Purchase Document">
+						<smartForm:layout>
+							<smartForm:Layout emptySpanL="1" emptySpanM="0" labelSpanL="3" labelSpanM="3"/>
+						</smartForm:layout>
+						<smartForm:Group id="createPurchaseDocumentSmartFormGroup">
+							<smartForm:GroupElement id="descriptionSmartFormGroupElement">
+								<smartField:SmartField value="{Description}" id="descriptionSmartField"/>
+							</smartForm:GroupElement>
+							<smartForm:GroupElement id="prioritySmartFormGroupElement">
+								<smartField:SmartField value="{Priority}" id="prioritySmartField" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement id="purchasingOrganizationSmartFormGroupElement">
+								<smartField:SmartField value="{PurchasingOrganization}" id="purchasingOrganizationSmartField" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement id="purchasingDocumentImageURLSmartFormGroupElement">
+								<smartField:SmartField value="{PurchaseDocumentImageURL}" id="purchasingDocumentImageURLSmartField" />
+							</smartForm:GroupElement>
+						</smartForm:Group>
+					</smartForm:SmartForm>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Button type="Default" text="Navigate to List" press="onNavToList"/>
+						<Button type="Emphasized" text="Save" press="onSave" id="savePurchaseDocumentButton"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+</mvc:View>
